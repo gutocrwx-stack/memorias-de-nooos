@@ -1,126 +1,87 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block title %}
-Memórias de Nós
-{% endblock %}
+    <title>Karen & Gustavo ❤️</title>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-{% block content %}
+<body>
 
-<section class="hero">
+    <main class="container">
 
-    <div class="hero-glow"></div>
+        <section class="hero">
+            <p class="small-title">UM LUGAR SÓ NOSSO</p>
 
-    <p class="eyebrow">
-        um lugar só nosso
-    </p>
+            <h1>Karen <span>♥</span> Gustavo</h1>
 
-    <h1>
-        Memórias<br>
-        <em>de Nós</em>
-    </h1>
+            <p class="subtitle">
+                Algumas memórias merecem ser guardadas para sempre.
+            </p>
 
-    <p class="hero-text">
-        Porque algumas histórias merecem
-        ser guardadas para sempre.
-    </p>
-
-    <a href="/historia" class="button">
-
-        Entrar na nossa história
-
-        <span>
-            →
-        </span>
-
-    </a>
-
-</section>
+            <a href="#memorias" class="button">
+                Ver nossas memórias
+            </a>
+        </section>
 
 
-<section class="quote-section reveal">
+        <section id="memorias" class="memories">
 
-    <div class="quote-mark">
-        “
-    </div>
+            <h2>Nossas memórias</h2>
 
-    <blockquote>
+            <p class="section-text">
+                Cada foto guarda um momento, uma história e um pedacinho
+                de tudo que vivemos juntos.
+            </p>
 
-        Algumas pessoas entram na nossa vida.
-        <br>
+            <div class="gallery">
 
-        Outras se tornam parte dela.
+                <img src="{{ url_for('static', filename='images/foto1.jpg') }}" alt="Karen e Gustavo">
+                <img src="{{ url_for('static', filename='images/foto2.jpg') }}" alt="Karen e Gustavo">
+                <img src="{{ url_for('static', filename='images/foto3.jpg') }}" alt="Karen e Gustavo">
+                <img src="{{ url_for('static', filename='images/foto4.jpg') }}" alt="Karen e Gustavo">
+                <img src="{{ url_for('static', filename='images/foto5.jpg') }}" alt="Karen e Gustavo">
+                <img src="{{ url_for('static', filename='images/foto6.jpg') }}" alt="Karen e Gustavo">
 
-    </blockquote>
+            </div>
 
-    <p>
-        — nós
-    </p>
-
-</section>
-
-
-<section class="home-cards">
+        </section>
 
 
-    <a href="/historia"
-       class="memory-card reveal">
+        <section class="message">
 
-        <span class="card-icon">
-            ♡
-        </span>
+            <div class="heart">♥</div>
 
-        <h2>
-            Nossa história
-        </h2>
+            <h2>Para você, Karen</h2>
 
-        <p>
-            Todos os capítulos que nos trouxeram
-            até aqui.
-        </p>
+            <p>
+                Entre tantos momentos que poderiam ser esquecidos,
+                existem aqueles que a gente gostaria de guardar para sempre.
+            </p>
 
-    </a>
+            <p>
+                Este pequeno espaço é para lembrar de nós,
+                das nossas histórias, das nossas risadas
+                e de tudo aquilo que faz nossas memórias serem especiais.
+            </p>
 
+            <p class="signature">
+                Com carinho,<br>
+                <strong>Gustavo ❤️</strong>
+            </p>
 
-
-    <a href="/memorias"
-       class="memory-card reveal">
-
-        <span class="card-icon">
-            ✦
-        </span>
-
-        <h2>
-            Nossas memórias
-        </h2>
-
-        <p>
-            Fotos, lugares, risadas e aqueles
-            pequenos momentos.
-        </p>
-
-    </a>
+        </section>
 
 
+        <footer>
+            <p>Karen & Gustavo</p>
+            <span>Feito com amor por Gustavo ❤️</span>
+        </footer>
 
-    <a href="/cartas"
-       class="memory-card reveal">
+    </main>
 
-        <span class="card-icon">
-            ✉
-        </span>
-
-        <h2>
-            Cartas
-        </h2>
-
-        <p>
-            Palavras para quando a saudade aparecer.
-        </p>
-
-    </a>
-
-
-</section>
-
-{% endblock %}
+</body>
+</html>
