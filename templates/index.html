@@ -11,77 +11,280 @@
 
 <body>
 
-    <main class="container">
+    <!-- ABERTURA -->
+    <header class="hero">
 
-        <section class="hero">
-            <p class="small-title">UM LUGAR SÓ NOSSO</p>
+        <div class="hero-content">
 
-            <h1>Karen <span>♥</span> Gustavo</h1>
+            <p class="eyebrow">UM LUGAR SÓ NOSSO</p>
 
-            <p class="subtitle">
-                Algumas memórias merecem ser guardadas para sempre.
+            <h1>
+                Karen
+                <span>♥</span>
+                Gustavo
+            </h1>
+
+            <p class="hero-subtitle">
+                Algumas histórias merecem ser guardadas para sempre.
             </p>
 
-            <a href="#memorias" class="button">
-                Ver nossas memórias
+            <a href="#historia" class="hero-button">
+                Entrar em nossa história
             </a>
-        </section>
+
+        </div>
+
+    </header>
 
 
-        <section id="memorias" class="memories">
+    <!-- NOSSA HISTÓRIA -->
+    <section id="historia" class="section history">
 
-            <h2>Nossas memórias</h2>
+        <div class="section-title">
+            <span>01</span>
+            <h2>Nossa história</h2>
+        </div>
 
-            <p class="section-text">
-                Cada foto guarda um momento, uma história e um pedacinho
-                de tudo que vivemos juntos.
-            </p>
-
-            <div class="gallery">
-
-                <img src="{{ url_for('static', filename='images/foto1.jpg') }}" alt="Karen e Gustavo">
-                <img src="{{ url_for('static', filename='images/foto2.jpg') }}" alt="Karen e Gustavo">
-                <img src="{{ url_for('static', filename='images/foto3.jpg') }}" alt="Karen e Gustavo">
-                <img src="{{ url_for('static', filename='images/foto4.jpg') }}" alt="Karen e Gustavo">
-                <img src="{{ url_for('static', filename='images/foto5.jpg') }}" alt="Karen e Gustavo">
-                <img src="{{ url_for('static', filename='images/foto6.jpg') }}" alt="Karen e Gustavo">
-
-            </div>
-
-        </section>
-
-
-        <section class="message">
-
-            <div class="heart">♥</div>
-
-            <h2>Para você, Karen</h2>
+        <div class="story-card">
 
             <p>
-                Entre tantos momentos que poderiam ser esquecidos,
-                existem aqueles que a gente gostaria de guardar para sempre.
+                Existem pessoas que simplesmente aparecem em nossas vidas
+                e, aos poucos, começam a fazer parte de tudo.
             </p>
 
             <p>
-                Este pequeno espaço é para lembrar de nós,
-                das nossas histórias, das nossas risadas
-                e de tudo aquilo que faz nossas memórias serem especiais.
+                Este espaço foi criado para guardar um pouco da nossa história,
+                dos momentos que vivemos e de todas aquelas pequenas coisas
+                que fazem a nossa história ser somente nossa.
             </p>
 
-            <p class="signature">
-                Com carinho,<br>
-                <strong>Gustavo ❤️</strong>
+            <p>
+                Porque algumas memórias merecem mais do que apenas serem
+                lembradas. Elas merecem um lugar para ficar.
             </p>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <footer>
-            <p>Karen & Gustavo</p>
-            <span>Feito com amor por Gustavo ❤️</span>
-        </footer>
+    <!-- CARTAS -->
+    <section class="section letters">
 
-    </main>
+        <div class="section-title">
+            <span>02</span>
+            <h2>Nossas cartas</h2>
+        </div>
+
+        <p class="section-description">
+            Algumas coisas são melhores quando colocadas em palavras.
+        </p>
+
+        <div class="letters-grid">
+
+            <article class="letter">
+
+                <div class="letter-icon">✉</div>
+
+                <h3>Para você</h3>
+
+                <p>
+                    Uma pequena carta para guardar tudo aquilo
+                    que às vezes não conseguimos dizer.
+                </p>
+
+                <button onclick="openLetter('letter1')">
+                    Abrir carta
+                </button>
+
+            </article>
+
+
+            <article class="letter">
+
+                <div class="letter-icon">♥</div>
+
+                <h3>Sobre nós</h3>
+
+                <p>
+                    Sobre os momentos, as risadas e tudo aquilo
+                    que tornou nossa história especial.
+                </p>
+
+                <button onclick="openLetter('letter2')">
+                    Abrir carta
+                </button>
+
+            </article>
+
+
+            <article class="letter">
+
+                <div class="letter-icon">✦</div>
+
+                <h3>Uma promessa</h3>
+
+                <p>
+                    Porque algumas memórias não precisam ter um fim.
+                </p>
+
+                <button onclick="openLetter('letter3')">
+                    Abrir carta
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOMENTOS -->
+    <section class="section moments">
+
+        <div class="section-title">
+            <span>03</span>
+            <h2>Nossos momentos</h2>
+        </div>
+
+        <p class="section-description">
+            Fotografias de momentos que queremos guardar.
+        </p>
+
+        <div class="gallery">
+
+            <img src="{{ url_for('static', filename='images/foto1.jpg') }}"
+                 alt="Karen e Gustavo">
+
+            <img src="{{ url_for('static', filename='images/foto2.jpg') }}"
+                 alt="Karen e Gustavo">
+
+            <img src="{{ url_for('static', filename='images/foto3.jpg') }}"
+                 alt="Karen e Gustavo">
+
+            <img src="{{ url_for('static', filename='images/foto4.jpg') }}"
+                 alt="Karen e Gustavo">
+
+            <img src="{{ url_for('static', filename='images/foto5.jpg') }}"
+                 alt="Karen e Gustavo">
+
+            <img src="{{ url_for('static', filename='images/foto6.jpg') }}"
+                 alt="Karen e Gustavo">
+
+        </div>
+
+    </section>
+
+
+    <!-- MENSAGEM FINAL -->
+    <section class="final-message">
+
+        <div class="final-heart">♥</div>
+
+        <h2>Karen & Gustavo</h2>
+
+        <p>
+            Que essas memórias continuem sendo apenas
+            o começo da nossa história.
+        </p>
+
+        <div class="signature">
+            Feito com amor por Gustavo ❤️
+        </div>
+
+    </section>
+
+
+    <!-- MODAL DAS CARTAS -->
+    <div id="letterModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeLetter()">
+                ×
+            </button>
+
+            <div class="modal-icon">♥</div>
+
+            <h2 id="letterTitle"></h2>
+
+            <p id="letterText"></p>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>Karen & Gustavo</p>
+
+        <span>
+            Feito com amor por Gustavo ❤️
+        </span>
+
+    </footer>
+
+
+    <script>
+
+        const letters = {
+
+            letter1: {
+                title: "Para você, Karen",
+                text:
+                    "Esta carta é para lembrar que existem pessoas que tornam nossos dias mais especiais simplesmente por estarem neles. Este pequeno espaço é uma forma de guardar um pedacinho de tudo aquilo que vivemos."
+            },
+
+            letter2: {
+                title: "Sobre nós",
+                text:
+                    "Nossa história é feita de pequenos momentos. Conversas, risadas, olhares, lembranças e todas aquelas coisas que talvez pareçam pequenas, mas que acabam significando muito."
+            },
+
+            letter3: {
+                title: "Uma promessa",
+                text:
+                    "Que nunca nos faltem motivos para criar novas memórias. Que possamos olhar para trás algum dia e perceber quantas histórias ainda escrevemos juntos."
+            }
+
+        };
+
+
+        function openLetter(letter) {
+
+            document.getElementById("letterTitle").innerText =
+                letters[letter].title;
+
+            document.getElementById("letterText").innerText =
+                letters[letter].text;
+
+            document.getElementById("letterModal")
+                .classList.add("active");
+
+            document.body.style.overflow = "hidden";
+        }
+
+
+        function closeLetter() {
+
+            document.getElementById("letterModal")
+                .classList.remove("active");
+
+            document.body.style.overflow = "auto";
+        }
+
+
+        document.getElementById("letterModal")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+                    closeLetter();
+                }
+
+            });
+
+    </script>
 
 </body>
 </html>
