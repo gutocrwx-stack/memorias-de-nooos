@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}
+Cartas
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-heading">
+
+    <p class="eyebrow">
+        para ler quando quiser
+    </p>
+
+    <h1>
+        Pequenas <em>cartas</em>
+    </h1>
+
+    <p>
+        Algumas coisas merecem ser escritas
+        para nunca serem esquecidas.
+    </p>
+
+</section>
+
+
+<section class="letters">
+
+
+    <button class="letter reveal"
+            data-letter="1">
+
+        <span>
+            01
+        </span>
+
+        <strong>
+            O que eu amo em você
+        </strong>
+
+        <small>
+            clique para abrir
+        </small>
+
+    </button>
+
+
+
+    <button class="letter reveal"
+            data-letter="2">
+
+        <span>
+            02
+        </span>
+
+        <strong>
+            Quando eu sinto saudade
+        </strong>
+
+        <small>
+            clique para abrir
+        </small>
+
+    </button>
+
+
+
+    <button class="letter reveal"
+            data-letter="3">
+
+        <span>
+            03
+        </span>
+
+        <strong>
+            Para o nosso futuro
+        </strong>
+
+        <small>
+            clique para abrir
+        </small>
+
+    </button>
+
+
+</section>
+
+
+<div class="letter-modal"
+     id="letter-modal">
+
+    <div class="modal-content">
+
+        <button class="close-modal">
+            ×
+        </button>
+
+        <p class="eyebrow">
+            uma carta
+        </p>
+
+        <h2 id="modal-title"></h2>
+
+        <p id="modal-text"></p>
+
+    </div>
+
+</div>
+
+{% endblock %}
