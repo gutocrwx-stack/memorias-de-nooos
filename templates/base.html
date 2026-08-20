@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}Memórias de Nós{% endblock %}
+    </title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+<header class="nav">
+
+    <a href="/" class="logo">
+        M<span>♥</span>N
+    </a>
+
+    <nav>
+
+        <a href="/">
+            Início
+        </a>
+
+        <a href="/historia">
+            Nossa história
+        </a>
+
+        <a href="/memorias">
+            Memórias
+        </a>
+
+        <a href="/cartas">
+            Cartas
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+
+<footer>
+
+    <span>
+        feito com amor
+    </span>
+
+    <span>
+        ♥
+    </span>
+
+    <span>
+        para guardar o que não queremos esquecer
+    </span>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
