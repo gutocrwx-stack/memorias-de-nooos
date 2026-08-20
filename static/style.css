@@ -1,7 +1,3 @@
-/* =========================================
-   KAREN & GUSTAVO — NIGHT EDITION 🌙
-   ========================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -13,408 +9,570 @@ html {
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
     background: #080b12;
-    color: #d8dbe2;
+    color: #d9dce3;
+    font-family: Georgia, "Times New Roman", serif;
     line-height: 1.7;
-    overflow-x: hidden;
 }
 
-.container {
-    width: 100%;
+body::selection {
+    background: #6d263b;
+    color: white;
 }
 
 
-/* =========================================
-   ABERTURA
-   ========================================= */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 100vh;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
     text-align: center;
-    padding: 40px 20px;
-    position: relative;
-    overflow: hidden;
+
+    padding: 30px;
 
     background:
         radial-gradient(
-            circle at 50% 25%,
-            rgba(100, 119, 150, 0.18),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 20% 80%,
-            rgba(94, 25, 42, 0.18),
-            transparent 35%
+            circle at 50% 30%,
+            rgba(95, 110, 135, 0.18),
+            transparent 38%
         ),
         linear-gradient(
             180deg,
-            #070a10 0%,
+            #05070c,
             #0b111c 55%,
-            #080a10 100%
+            #07090e
         );
 }
 
-
-/* pequenos pontos de luz */
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #ffffff;
-    top: 20%;
-    left: 18%;
-    border-radius: 50%;
-    opacity: 0.55;
-    box-shadow:
-        90px 30px #ffffff,
-        220px -20px #ffffff,
-        430px 50px #ffffff,
-        -80px 180px #ffffff,
-        350px 190px #ffffff,
-        -230px 80px #ffffff;
+.hero-content {
+    max-width: 800px;
 }
 
-
-/* =========================================
-   TEXTO INICIAL
-   ========================================= */
-
-.small-title {
+.eyebrow {
     font-family: Arial, sans-serif;
     font-size: 11px;
     letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #9ca6b8;
-    margin-bottom: 24px;
-    position: relative;
-    z-index: 1;
+    color: #8d96a7;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
-    font-size: clamp(48px, 9vw, 92px);
+    font-size: clamp(55px, 10vw, 105px);
     font-weight: normal;
-    letter-spacing: -2px;
-    color: #e7e9ee;
-    margin-bottom: 22px;
-    position: relative;
-    z-index: 1;
-    text-shadow:
-        0 0 25px rgba(170, 180, 200, 0.12);
+    color: #e8e9ed;
+    line-height: 1.1;
 }
 
 .hero h1 span {
-    color: #8e3048;
-    font-size: 0.7em;
+    color: #8c3048;
     margin: 0 10px;
-    text-shadow:
-        0 0 20px rgba(142, 48, 72, 0.45);
 }
 
-.subtitle {
-    max-width: 570px;
+.hero-subtitle {
+    max-width: 550px;
+    margin: 25px auto 35px;
+
+    color: #969eae;
     font-size: 18px;
-    color: #9da5b4;
-    margin-bottom: 38px;
-    position: relative;
-    z-index: 1;
 }
 
-
-/* =========================================
-   BOTÃO
-   ========================================= */
-
-.button {
+.hero-button {
     display: inline-block;
-    padding: 14px 32px;
-    border: 1px solid rgba(160, 169, 185, 0.35);
-    border-radius: 2px;
-    background: rgba(40, 45, 57, 0.5);
-    color: #e5e7eb;
+
+    padding: 14px 30px;
+
+    border: 1px solid #566071;
+
+    color: #e0e2e7;
     text-decoration: none;
+
     font-family: Arial, sans-serif;
     font-size: 12px;
+
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: 0.35s ease;
-    position: relative;
-    z-index: 1;
+
+    transition: 0.3s;
 }
 
-.button:hover {
-    background: #641f32;
-    border-color: #8e3048;
-    box-shadow:
-        0 0 25px rgba(142, 48, 72, 0.25);
-    transform: translateY(-3px);
+.hero-button:hover {
+    background: #642136;
+    border-color: #8c3048;
 }
 
 
-/* =========================================
-   MEMÓRIAS
-   ========================================= */
+/* =========================
+   SEÇÕES
+========================= */
 
-.memories {
-    max-width: 1100px;
-    margin: 0 auto;
+.section {
+    max-width: 1050px;
+    margin: auto;
+
     padding: 110px 25px;
+}
+
+.section-title {
     text-align: center;
-    background: #080b12;
+    margin-bottom: 45px;
 }
 
-.memories h2,
-.message h2 {
-    font-size: 43px;
+.section-title span {
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    color: #7e8797;
+
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 45px;
     font-weight: normal;
-    color: #dfe2e8;
-    margin-bottom: 16px;
-    text-shadow:
-        0 0 20px rgba(180, 190, 210, 0.08);
+
+    color: #e0e2e7;
 }
 
-.section-text {
-    max-width: 650px;
-    margin: 0 auto 60px;
-    color: #8f98a8;
-    font-size: 16px;
+.section-description {
+    text-align: center;
+
+    max-width: 600px;
+    margin: -20px auto 45px;
+
+    color: #858e9f;
 }
 
 
-/* =========================================
-   GALERIA
-   ========================================= */
+/* =========================
+   HISTÓRIA
+========================= */
+
+.story-card {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 50px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(27, 33, 44, 0.85),
+            rgba(12, 16, 24, 0.95)
+        );
+
+    border: 1px solid rgba(150, 160, 180, 0.12);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.story-card p {
+    color: #aab0bb;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+.story-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   CARTAS
+========================= */
+
+.letters {
+    max-width: 1150px;
+}
+
+.letters-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.letter {
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111722,
+            #090c13
+        );
+
+    border: 1px solid rgba(150, 160, 180, 0.12);
+
+    transition: 0.4s;
+}
+
+.letter:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(140, 48, 72, 0.45);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(100, 30, 50, 0.12);
+}
+
+.letter-icon {
+    font-size: 35px;
+
+    color: #8c3048;
+
+    margin-bottom: 15px;
+}
+
+.letter h3 {
+    font-size: 25px;
+    font-weight: normal;
+
+    color: #dfe2e7;
+
+    margin-bottom: 15px;
+}
+
+.letter p {
+    color: #858e9d;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+.letter button {
+    background: transparent;
+
+    border: 1px solid #555e6d;
+
+    color: #cfd3da;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.letter button:hover {
+    background: #642136;
+
+    border-color: #8c3048;
+
+    color: white;
+}
+
+
+/* =========================
+   FOTOS
+========================= */
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 18px;
-    width: 100%;
 }
 
 .gallery img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
 
-    border: 1px solid rgba(160, 170, 190, 0.12);
-    border-radius: 3px;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border: 1px solid rgba(150, 160, 180, 0.12);
 
     filter:
         brightness(0.78)
-        contrast(1.08)
+        contrast(1.05)
         saturate(0.75);
 
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.45);
-
-    transition:
-        transform 0.5s ease,
-        filter 0.5s ease,
-        box-shadow 0.5s ease;
+    transition: 0.5s;
 }
 
 .gallery img:hover {
     transform: scale(1.025);
 
     filter:
-        brightness(0.95)
+        brightness(1)
         contrast(1.05)
-        saturate(0.9);
+        saturate(0.95);
 
     box-shadow:
-        0 20px 45px rgba(0, 0, 0, 0.65),
-        0 0 25px rgba(100, 30, 50, 0.15);
+        0 20px 45px rgba(0, 0, 0, 0.6);
 }
 
 
-/* =========================================
-   MENSAGEM
-   ========================================= */
+/* =========================
+   MENSAGEM FINAL
+========================= */
 
-.message {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 100px 30px 120px;
+.final-message {
     text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 120px 25px;
 }
 
-.heart {
-    font-size: 44px;
-    color: #8e3048;
-    margin-bottom: 18px;
+.final-heart {
+    font-size: 48px;
+
+    color: #8c3048;
+
+    margin-bottom: 20px;
 
     text-shadow:
-        0 0 25px rgba(142, 48, 72, 0.45);
-
-    animation: heartbeat 3s infinite;
+        0 0 25px rgba(140, 48, 72, 0.45);
 }
 
-.message h2 {
-    margin-bottom: 32px;
+.final-message h2 {
+    font-size: 45px;
+
+    font-weight: normal;
+
+    color: #e1e3e8;
+
+    margin-bottom: 20px;
 }
 
-.message p {
-    color: #9ba2af;
+.final-message p {
+    color: #9098a7;
+
     font-size: 17px;
-    margin-bottom: 24px;
 }
 
 .signature {
-    margin-top: 42px;
+    margin-top: 40px;
+
+    color: #9e3b55;
+
     font-style: italic;
-    color: #747d8c !important;
-}
 
-.signature strong {
-    font-size: 21px;
-    color: #a83d58;
+    font-size: 17px;
 }
 
 
-/* =========================================
-   RODAPÉ
-   ========================================= */
+/* =========================
+   MODAL DAS CARTAS
+========================= */
 
-footer {
-    padding: 55px 20px;
-    text-align: center;
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(3, 5, 9, 0.88);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+.modal.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.modal-content {
+    max-width: 650px;
+
+    width: 100%;
+
+    padding: 55px 45px;
 
     background:
         linear-gradient(
-            180deg,
-            #080b12,
-            #05070b
+            145deg,
+            #151b27,
+            #090d15
         );
 
-    border-top: 1px solid rgba(150, 160, 180, 0.08);
+    border: 1px solid rgba(150, 160, 180, 0.15);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.7);
+
+    position: relative;
+
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    background: none;
+
+    border: none;
+
+    color: #9aa2b0;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.modal-icon {
+    color: #8c3048;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    color: #e3e5ea;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.modal-content p {
+    color: #9ca4b2;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #05070b;
+
+    border-top:
+        1px solid rgba(150, 160, 180, 0.08);
 }
 
 footer p {
-    font-size: 24px;
-    color: #dfe2e8;
-    margin-bottom: 10px;
+    color: #dfe2e7;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
 }
 
 footer span {
+    color: #717987;
+
     font-family: Arial, sans-serif;
-    font-size: 12px;
+
+    font-size: 11px;
+
     letter-spacing: 2px;
-    color: #737b89;
 }
 
 
-/* =========================================
-   ANIMAÇÃO
-   ========================================= */
-
-@keyframes heartbeat {
-
-    0% {
-        transform: scale(1);
-    }
-
-    8% {
-        transform: scale(1.12);
-    }
-
-    16% {
-        transform: scale(1);
-    }
-
-    24% {
-        transform: scale(1.08);
-    }
-
-    32% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-/* =========================================
+/* =========================
    TABLET
-   ========================================= */
+========================= */
 
 @media (max-width: 800px) {
 
-    .hero {
-        min-height: 90vh;
+    .letters-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .memories {
-        padding: 80px 20px;
-    }
-
-    .memories h2,
-    .message h2 {
-        font-size: 36px;
-    }
 }
 
 
-/* =========================================
+/* =========================
    CELULAR
-   ========================================= */
+========================= */
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
 
     .hero {
         min-height: 100vh;
-        padding: 30px 18px;
-    }
-
-    .small-title {
-        font-size: 9px;
-        letter-spacing: 3px;
+        padding: 25px 18px;
     }
 
     .hero h1 {
-        font-size: 48px;
-        line-height: 1.15;
+        font-size: 50px;
     }
 
-    .hero h1 span {
-        margin: 0 5px;
-    }
-
-    .subtitle {
+    .hero-subtitle {
         font-size: 16px;
-        max-width: 320px;
     }
 
-    .button {
-        padding: 13px 24px;
+    .section {
+        padding: 80px 16px;
     }
 
-    .memories {
-        padding: 75px 15px;
+    .section-title h2 {
+        font-size: 35px;
     }
 
-    .memories h2,
-    .message h2 {
-        font-size: 32px;
+    .story-card {
+        padding: 30px 25px;
     }
 
-    .section-text {
-        font-size: 15px;
-        margin-bottom: 38px;
+    .story-card p {
+        font-size: 16px;
+    }
+
+    .letters-grid {
+        grid-template-columns: 1fr;
     }
 
     .gallery {
@@ -422,23 +580,20 @@ footer span {
         gap: 9px;
     }
 
-    .gallery img {
-        border-radius: 2px;
+    .final-message {
+        padding: 90px 20px;
     }
 
-    .message {
-        padding: 70px 22px 80px;
+    .final-message h2 {
+        font-size: 36px;
     }
 
-    .message p {
-        font-size: 16px;
+    .modal-content {
+        padding: 45px 25px;
     }
 
-    footer {
-        padding: 40px 15px;
+    .modal-content h2 {
+        font-size: 27px;
     }
 
-    footer p {
-        font-size: 21px;
-    }
 }
